@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script>
+        var get = (url, callback) => {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    callback(xhr.responseText, xhr.status);
+                }
+            };
+            xhr.open('GET', url);
+            xhr.send(null);
+        }
+
+        get('http://localhost:3000', (data) => {
+            document.getElementById('ajax').innerHTML = data;
+        })
+    </script>
+</head>
+
+<body>
+    <h1>AJAX</h1>
+    <div id="ajax"></div>
+
+</body>
+
+</html>
