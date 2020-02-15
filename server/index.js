@@ -4,19 +4,19 @@ const port = 3000
 
 var contatos = [
     {
-        nome: 'Pedro',
+        nome: 'PEDRO DE MORAES',
         telefone: '99998888',
         data: new Date(),
         operadora: { nome: 'Oi', codigo: 14, categoria: 'Celular' }
     },
     {
-        nome: 'Ana',
+        nome: 'AnA dA sIlVA',
         telefone: '99998877',
         data: new Date(),
         operadora: { nome: 'Vivo', codigo: 15, categoria: 'Celular' }
     },
     {
-        nome: 'Maria',
+        nome: 'maria alberto ribeiro',
         telefone: '99998866',
         data: new Date(),
         operadora: { nome: 'Tim', codigo: 41, categoria: 'Celular' }
