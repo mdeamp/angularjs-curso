@@ -7,19 +7,22 @@ var contatos = [
         nome: 'PEDRO DE MORAES',
         telefone: '99998888',
         data: new Date(),
-        operadora: { nome: 'Oi', codigo: 14, categoria: 'Celular' }
+        operadora: { nome: 'Oi', codigo: 14, categoria: 'Celular' },
+        data: '01/01/2020'
     },
     {
         nome: 'AnA dA sIlVA',
         telefone: '99998877',
         data: new Date(),
-        operadora: { nome: 'Vivo', codigo: 15, categoria: 'Celular' }
+        operadora: { nome: 'Vivo', codigo: 15, categoria: 'Celular' },
+        data: '15/01/2020'
     },
     {
         nome: 'maria alberto ribeiro',
         telefone: '99998866',
         data: new Date(),
-        operadora: { nome: 'Tim', codigo: 41, categoria: 'Celular' }
+        operadora: { nome: 'Tim', codigo: 41, categoria: 'Celular' },
+        data: '30/01/2020'
     }
 ];
 

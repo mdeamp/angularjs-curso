@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaTelefonica">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AngularJS - 012</title>
+
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/ui.css">
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/bootstrap.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-messages.js"></script>
+  <script src="lib/angular/angular-locale_pt-br.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/config/serialGeneratorConfig.js"></script>
+  <script src="js/controllers/listaTelefonicaCtrl.js"></script>
+  <script src="js/directives/uiAlertDirective.js"></script>
+  <script src="js/directives/uiDateDirective.js"></script>
+  <script src="js/directives/uiAccordionDirective.js"></script>
+  <script src="js/filters/nameFilters.js"></script>
+  <script src="js/filters/ellipsisFilter.js"></script>
+  <script src="js/services/contatosAPIService.js"></script>
+  <script src="js/services/operadorasAPIService.js"></script>
+  <script src="js/services/serialGeneratorService.js"></script>
+  <script src="js/values/configValue.js"></script>
+</head>
+
+<body ng-controller="listaTelefonicaCtrl">
+  <div class="jumbotron">
+    <h3>{{app}}</h3>
+
+    <ui-accordions>
+      <ui-accordion title="Accordion 1">
+        Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+        ipsum
+        elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+        aliquip
+        do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+        Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+        anim
+        officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+        id
+        pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+        fugiat
+        nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+        Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+        pariatur
+        proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+        deserunt.
+        Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+      </ui-accordion>
+      <ui-accordion title="Accordion 2">
+        Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+        ipsum
+        elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+        aliquip
+        do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+        Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+        anim
+        officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+        id
+        pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+        fugiat
+        nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+        Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+        pariatur
+        proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+        deserunt.
+        Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+      </ui-accordion>
+      <ui-accordion title="Accordion 3">
+        Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+        ipsum
+        elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+        aliquip
+        do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+        Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+        anim
+        officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+        id
+        pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+        fugiat
+        nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+        Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+        pariatur
+        proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+        deserunt.
+        Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+      </ui-accordion>
+      <ui-accordion title="Accordion 4">
+        Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+        ipsum
+        elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+        aliquip
+        do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+        Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+        anim
+        officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+        id
+        pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+        fugiat
+        nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+        Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+        pariatur
+        proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+        deserunt.
+        Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+      </ui-accordion>
+    </ui-accordions>
+
+    <input type="text" class="form-control" ng-model="criterioDeBusca">
+    <table ng-hide="contatos.length === 0" class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Serial</th>
+          <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
+          <th><a href="" ng-click="ordenarPor('telefone')">Telefone</a></th>
+          <th><a href="" ng-click="ordenarPor('operadora.nome')">Operadora</a></th>
+          <th><a href="" ng-click="ordenarPor('data')">Data</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-class="{ 'selecionado negrito': contato.selecionado }"
+          ng-repeat="contato in contatos | filter:{ nome: criterioDeBusca } | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+          <td><input type="checkbox" ng-model="contato.selecionado"></input></td>
+          <td>{{contato.serial}}</td>
+          <td>{{contato.nome | name | ellipsis:20}}</td>
+          <td>{{contato.telefone}}</td>
+          <td>{{contato.operadora.nome}}</td>
+          <td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+
+    <form name="contatoForm">
+      <input placeholder="Nome..." class="form-control" type="text" ng-model="contato.nome" name="nome"
+        ng-required="true" ng-minlength="10">
+      <input placeholder="Telefone..." class="form-control" type="text" ng-model="contato.telefone" name="telefone"
+        ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/">
+
+      <!-- {{contato.data}} -->
+      <input placeholder="Data..." class="form-control" type="text" ng-model="contato.data" name="data"
+        ng-required="true" ui-date>
+
+      <select class="form-control" ng-model="contato.operadora"
+        ng-options="operadora.nome + ' (' + (operadora.preco | currency) + ')' for operadora in operadoras | orderBy:'nome'">
+        <option value="">Selecione uma operadora</option>
+      </select>
+    </form>
+
+    <div ng-show="contatoForm.nome.$error.required && contatoForm.nome.$dirty" class="alert alert-danger">
+      Por favor, preencha o nome!
+    </div>
+    <div ng-show="contatoForm.nome.$error.minlength" class="alert alert-danger">
+      O campo "nome" deve ter, no mínimo, 10 caracteres.
+    </div>
+    <div ng-show="contatoForm.telefone.$error.required && contatoForm.telefone.$dirty" class="alert alert-danger">
+      Por favor, preencha o telefone!
+    </div>
+    <div ng-show="contatoForm.telefone.$error.pattern" class="alert alert-danger">
+      O campo "telefone" deve ter o formato "99999-9999".
+    </div>
+
+    <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)" ng-disabled="contatoForm.$invalid">
+      Adicionar Contato
+    </button>
+    <button class="btn btn-danger btn-block" ng-click="apagarContatos(contatos)" ng-if="isContatoSelecionado(contatos)">
+      Apagar Contatos
+    </button>
+  </div>
+
+  <div ng-include="'view/footer.html'"></div>
+</body>
+
+</html>
