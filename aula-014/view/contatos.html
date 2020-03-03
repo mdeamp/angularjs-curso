@@ -1,0 +1,122 @@
+<div class="jumbotron" ng-controller="listaTelefonicaCtrl">
+  <h3>{{app}}</h3>
+
+  <ui-accordions>
+    <ui-accordion title="Accordion 1">
+      Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+      ipsum
+      elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+      aliquip
+      do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+      Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+      anim
+      officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+      id
+      pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+      fugiat
+      nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+      Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+      pariatur
+      proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+      deserunt.
+      Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+    </ui-accordion>
+    <ui-accordion title="Accordion 2">
+      Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+      ipsum
+      elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+      aliquip
+      do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+      Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+      anim
+      officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+      id
+      pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+      fugiat
+      nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+      Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+      pariatur
+      proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+      deserunt.
+      Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+    </ui-accordion>
+    <ui-accordion title="Accordion 3">
+      Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+      ipsum
+      elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+      aliquip
+      do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+      Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+      anim
+      officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+      id
+      pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+      fugiat
+      nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+      Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+      pariatur
+      proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+      deserunt.
+      Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+    </ui-accordion>
+    <ui-accordion title="Accordion 4">
+      Duis ut aliquip ex eiusmod enim Lorem consectetur aute laboris enim. Id laboris excepteur sunt occaecat labore
+      ipsum
+      elit et tempor aliquip sunt. Deserunt est et consequat labore excepteur dolore cillum elit nisi ex adipisicing
+      aliquip
+      do dolor. Ex eiusmod nostrud labore occaecat amet dolor Lorem veniam.
+
+      Reprehenderit ut enim commodo duis est pariatur laboris velit amet. Veniam id quis culpa magna Lorem laborum
+      anim
+      officia ex. Qui dolore Lorem consequat veniam proident est eiusmod dolor aliqua. In non est magna nisi ullamco
+      id
+      pariatur laboris. Adipisicing quis aliquip nulla laborum. Aliquip occaecat quis culpa laborum tempor ullamco
+      fugiat
+      nulla nulla officia in excepteur. Incididunt dolor cillum pariatur Lorem.
+
+      Sit id duis officia incididunt laborum ipsum. Cupidatat magna elit exercitation ipsum est labore id eu minim
+      pariatur
+      proident. Veniam sit qui non excepteur anim consequat Lorem aute nisi excepteur exercitation consectetur eu
+      deserunt.
+      Cupidatat est enim et cupidatat reprehenderit qui fugiat enim minim sit Lorem sunt.
+    </ui-accordion>
+  </ui-accordions>
+
+  <input type="text" class="form-control" ng-model="criterioDeBusca">
+  <table ng-hide="contatos.length === 0" class="table table-striped table-responsive">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Serial</th>
+        <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
+        <th><a href="" ng-click="ordenarPor('telefone')">Telefone</a></th>
+        <th><a href="" ng-click="ordenarPor('operadora.nome')">Operadora</a></th>
+        <th><a href="" ng-click="ordenarPor('data')">Data</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-class="{ 'selecionado negrito': contato.selecionado }"
+        ng-repeat="contato in contatos | filter:{ nome: criterioDeBusca } | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+        <td><input type="checkbox" ng-model="contato.selecionado"></input></td>
+        <td>{{contato.serial}}</td>
+        <td>{{contato.nome | name | ellipsis:20}}</td>
+        <td>{{contato.telefone}}</td>
+        <td>{{contato.operadora.nome}}</td>
+        <td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <a class="btn btn-primary btn-block" href="#/novoContato">Novo Contato</a>
+
+  <button class="btn btn-danger btn-block" ng-click="apagarContatos(contatos)" ng-if="isContatoSelecionado(contatos)">
+    Apagar Contatos
+  </button>
+</div>
